@@ -25,8 +25,10 @@ public class Product {
     @NonNull
     private BigDecimal price;
     @NonNull
+    @Enumerated(value = EnumType.STRING)
     private ProductType type;
     @NonNull
+    @Enumerated(value = EnumType.STRING)
     private ProductAvailability availability;
     private byte[] image1;
     private byte[] image2;
