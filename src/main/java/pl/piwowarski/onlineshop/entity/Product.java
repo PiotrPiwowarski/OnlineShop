@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.lang.NonNull;
 import pl.piwowarski.onlineshop.enums.Availability;
+import pl.piwowarski.onlineshop.enums.ProductType;
 
 import java.math.BigDecimal;
 
@@ -18,17 +19,19 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long productId;
     @NonNull
-    private String name;
+    private String productName;
     @NonNull
-    private BigDecimal price;
+    private BigDecimal productPrice;
     @NonNull
-    private Availability availability;
+    private ProductType productType;
     @NonNull
-    private byte[] image1;
-    private byte[] image2;
-    private byte[] image3;
+    private Availability productAvailability;
     @NonNull
-    private String description;
+    private byte[] productImage1;
+    private byte[] productImage2;
+    private byte[] productImage3;
+    @NonNull
+    private String productDescription;
 }
