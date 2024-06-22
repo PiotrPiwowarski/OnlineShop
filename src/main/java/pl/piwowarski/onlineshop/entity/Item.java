@@ -3,8 +3,8 @@ package pl.piwowarski.onlineshop.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.lang.NonNull;
-import pl.piwowarski.onlineshop.enums.ProductAvailability;
-import pl.piwowarski.onlineshop.enums.ProductType;
+import pl.piwowarski.onlineshop.enums.ItemAvailability;
+import pl.piwowarski.onlineshop.enums.ItemType;
 
 import java.math.BigDecimal;
 
@@ -14,8 +14,8 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Builder
-@Table(name = "products")
-public class Product {
+@Table(name = "items")
+public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,10 +26,10 @@ public class Product {
     private BigDecimal price;
     @NonNull
     @Enumerated(value = EnumType.STRING)
-    private ProductType type;
+    private ItemType type;
     @NonNull
     @Enumerated(value = EnumType.STRING)
-    private ProductAvailability availability;
+    private ItemAvailability availability;
     private byte[] image1;
     private byte[] image2;
     private byte[] image3;

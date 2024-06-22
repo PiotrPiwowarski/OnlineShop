@@ -5,6 +5,6 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class WrongProductTypeException extends RuntimeException {
+public class WrongItemTypeException extends RuntimeException {
     private String message;
 }

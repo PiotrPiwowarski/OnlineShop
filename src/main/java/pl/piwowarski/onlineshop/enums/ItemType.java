@@ -1,5 +1,5 @@
 package pl.piwowarski.onlineshop.enums;
 
-public enum ProductType {
+public enum ItemType {
     SWEET, DRINK, FLOUR, BREAD, PASTA
 }

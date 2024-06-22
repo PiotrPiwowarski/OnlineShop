@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class NoProductWithSuchIdException extends RuntimeException {
+public class NoItemsWithSuchIdException extends RuntimeException {
 
     private String message;
 }
