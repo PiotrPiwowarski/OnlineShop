@@ -1,5 +1,5 @@
 package pl.piwowarski.onlineshop.enums;
 
-public enum Availability {
+public enum ProductAvailability {
     LOW, MEDIUM, HIGH
 }

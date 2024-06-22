@@ -3,7 +3,7 @@ package pl.piwowarski.onlineshop.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.lang.NonNull;
-import pl.piwowarski.onlineshop.enums.Availability;
+import pl.piwowarski.onlineshop.enums.ProductAvailability;
 import pl.piwowarski.onlineshop.enums.ProductType;
 
 import java.math.BigDecimal;
@@ -14,24 +14,23 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @RequiredArgsConstructor
 @Builder
-@Table(name = "PRODUCTS")
+@Table(name = "products")
 public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long productId;
+    private long id;
     @NonNull
-    private String productName;
+    private String name;
     @NonNull
-    private BigDecimal productPrice;
+    private BigDecimal price;
     @NonNull
-    private ProductType productType;
+    private ProductType type;
     @NonNull
-    private Availability productAvailability;
+    private ProductAvailability availability;
+    private byte[] image1;
+    private byte[] image2;
+    private byte[] image3;
     @NonNull
-    private byte[] productImage1;
-    private byte[] productImage2;
-    private byte[] productImage3;
-    @NonNull
-    private String productDescription;
+    private String description;
 }
